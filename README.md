@@ -16,7 +16,13 @@ None.
 
 ## Environment Variables
 
-None.
+It's often useful to have pandoc output to a separate directory, for example for easier deployment.
+You can *create* such a directory using the `OUT_DIR` environment variable.
+
+- `OUT_DIR` a path relative from `workspace/github` (~ your repository root) *without* trailing slash.
+
+If you've set it, the directory will be `mkdir`ed.
+Remember to point the output argument of your pandoc call in the `args` section to this new directory.
 
 
 ## Arguments
@@ -25,6 +31,8 @@ All arguments get appended to the [`pandoc` command](https://pandoc.org/MANUAL.h
 
 
 ## Example Usage
+
+This is the action block used to render the website for this action.
 
 ```
 action "Convert" {
