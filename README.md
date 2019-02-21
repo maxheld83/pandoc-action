@@ -16,13 +16,13 @@ None.
 
 ## Environment Variables
 
-It's often useful to have pandoc output to a separate directory, for example for easier deployment.
-You can *create* such a directory using the `OUT_DIR` environment variable.
-
-- `OUT_DIR` a path relative from `workspace/github` (~ your repository root) *without* trailing slash.
-
-If you've set it, the directory will be `mkdir`ed.
-Remember to point the output argument of your pandoc call in the `args` section to this new directory.
+- `OUT_DIR` (optional) a path relative from `workspace/github` (~ your repository root) *without* trailing slash.
+  
+  It's often useful to have pandoc output to a separate directory, for example for easier deployment.
+  You can *create* such a directory using the `OUT_DIR` environment variable.
+  
+  If you've set it, the directory will be `mkdir`ed.
+  Remember to point the output argument of your pandoc call in the `args` section to this new directory.
 
 
 ## Arguments
