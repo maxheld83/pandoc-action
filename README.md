@@ -6,7 +6,7 @@
 This action lets you use [pandoc](https://pandoc.org/), the **swiss army knife of document conversion**.
 
 It is based on the [`pandoc/latex`](https://hub.docker.com/r/pandoc/latex/) docker image and thus ships with LaTeX, so you can also convert right through to PDF.
-The action currently uses pandoc 2.6, and will be upgrade periodically. 
+The action currently uses pandoc 2.6 and will be upgrade periodically. 
 
 
 ## Secrets
