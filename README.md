@@ -29,6 +29,9 @@ All arguments get appended to the [`pandoc` command](https://pandoc.org/MANUAL.h
 ```
 action "Convert" {
   uses = "maxheld83/pandoc@v0.1.0"
+  env = {
+    OUT_DIR = "public"
+  }
   args = [
     "--standalone",
     "--output=public/index.html",
