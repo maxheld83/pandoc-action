@@ -31,7 +31,7 @@ action "Convert" {
   uses = "maxheld83/pandoc@v0.1.0"
   args = [
     "--standalone",
-    "--output=index.html",
+    "--output=public/index.html",
     "README.md"
   ]
 }
