@@ -32,22 +32,21 @@ None.
 
 ## Example Usage
 
-All arguments get appended to the [`pandoc` command](https://pandoc.org/MANUAL.html).
+The string passed to `args` gets appended to the [`pandoc` command](https://pandoc.org/MANUAL.html).
+The below example is equivalent to running `pandoc --help`.
 
 ```
 name: Document Conversion
 
-on: [push]
+on: push
 
 jobs:
   convert_via_pandoc:
     name: Convert via Pandoc
     runs-on: ubuntu-18.04
-    steps: 
-      - name: Run Pandoc
-        uses: maxheld83/pandoc@master
-        args: 
-          - '--standalone'
-          - '--output=index.html'
-          - 'README.md'
+    steps:
+      - uses: actions/checkout@v1
+      - uses: maxheld83/pandoc@master
+        with:
+          args: "--help"
 ```
