@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: maxheld83/pandoc@master
         with:
-          args: "--standalone --output=index.html README.md"
+          args: "-a"
