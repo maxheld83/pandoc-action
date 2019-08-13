@@ -8,5 +8,3 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: maxheld83/pandoc@master
-        with:
-          args: "-a"
