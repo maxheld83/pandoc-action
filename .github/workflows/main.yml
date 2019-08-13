@@ -12,3 +12,7 @@ jobs:
       - uses: maxheld83/pandoc@master
         with:
           args: "--standalone --output=output/index.html README.md"
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
