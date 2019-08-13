@@ -1,6 +1,6 @@
 name: Document Conversion
 
-on: [push]
+on: push
 
 jobs:
   convert_via_pandoc:
