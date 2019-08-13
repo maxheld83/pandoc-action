@@ -3,7 +3,7 @@ description: 'GitHub Action to Convert Documents via Pandoc'
 author: 'Max Held'
 runs:
   using: 'docker'
-  image: 'docker:://pandoc/latex:2.6'
+  image: 'docker://pandoc/latex:2.6'
   entrypoint: pandoc
   args: 
   - '--help'
