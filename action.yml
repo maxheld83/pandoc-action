@@ -1,4 +1,4 @@
-name: 'Pandoc'
+name: 'Pandoc Document Conversion'
 description: 'GitHub Action to Convert Documents via Pandoc'
 author: 'Max Held'
 runs:
