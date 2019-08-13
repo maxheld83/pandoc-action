@@ -50,3 +50,33 @@ jobs:
         with:
           args: "--help"
 ```
+
+
+## Advanced Usage
+
+You can:
+
+- create an output directory to compile into; makes it easier to deploy outputs.
+- upload the output directory to [GitHub's artifact storage](https://help.github.com/en/articles/managing-a-workflow-run#downloading-logs-and-artifacts); you can quickly download the results from your GitHub Actions tab in your repo.
+
+```
+name: Document Conversion
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    name: Convert via Pandoc
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - run: mkdir output
+      - run: echo "foo" > input.txt
+      - uses: maxheld83/pandoc@master
+        with:
+          args: "--standalone --output=output/index.html input.txt"
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
+```
