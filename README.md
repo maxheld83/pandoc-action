@@ -7,6 +7,7 @@ This action lets you use [pandoc](https://pandoc.org/), the **swiss army knife o
 
 It is based on the [`pandoc/latex`](https://hub.docker.com/r/pandoc/latex/) docker image and thus ships with LaTeX, so you can also convert right through to PDF.
 The action currently uses pandoc 2.6 and will be upgrade periodically. 
+If you would like to see an upgrade, please [file an issue](http://github.com/maxheld83/pandoc/issues).
 
 
 ## Secrets
@@ -16,13 +17,7 @@ None.
 
 ## Environment Variables
 
-- `OUT_DIR` (optional) a path relative from `workspace/github` (~ your repository root) *without* trailing slash.
-  
-  It's often useful to have pandoc output to a separate directory, for example for easier deployment.
-  You can *create* such a directory using the `OUT_DIR` environment variable.
-  
-  If you've set it, the directory will be `mkdir`ed.
-  Remember to point the output argument of your pandoc call in the `args` section to this new directory.
+None.
 
 
 ## Arguments
@@ -32,18 +27,21 @@ All arguments get appended to the [`pandoc` command](https://pandoc.org/MANUAL.h
 
 ## Example Usage
 
-This is the action block used to render the website for this action.
 
 ```
-action "Convert" {
-  uses = "maxheld83/pandoc@v0.1.0"
-  env = {
-    OUT_DIR = "public"
-  }
-  args = [
-    "--standalone",
-    "--output=public/index.html",
-    "README.md"
-  ]
-}
+name: Document Conversion
+
+on: [push]
+
+jobs:
+  convert_via_pandoc:
+    name: Convert via Pandoc
+    runs-on: ubuntu-18.04
+    steps: 
+      - name: Run Pandoc
+        uses: maxheld83/pandoc@master
+        args: 
+          - '--standalone'
+          - '--output=index.html'
+          - 'README.md'
 ```

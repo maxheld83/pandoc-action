@@ -1,0 +1,15 @@
+name: Document Conversion
+
+on: [push]
+
+jobs:
+  convert_via_pandoc:
+    name: Convert via Pandoc
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Run Pandoc
+        uses: maxheld83/pandoc@master
+        args:
+          - '--standalone'
+          - '--output=index.html'
+          - 'README.md'
