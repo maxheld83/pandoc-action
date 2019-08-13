@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: maxheld83/pandoc@master
-        args: --standalone --output=index.html README.md
+        with:
+          args: --standalone --output=index.html README.md
