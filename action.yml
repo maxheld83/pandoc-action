@@ -5,8 +5,6 @@ runs:
   using: 'docker'
   image: 'docker:://pandoc/latex:2.6'
   entrypoint: pandoc
-  args: 
-  - '--help'
 branding:
   icon: 'book-open'  
   color: 'green'

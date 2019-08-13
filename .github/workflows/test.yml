@@ -7,6 +7,5 @@ jobs:
     name: Convert via Pandoc
     runs-on: ubuntu-18.04
     steps:
-      - name: Run Pandoc
-        uses: maxheld83/pandoc@master
+      - uses: maxheld83/pandoc@master
         args: --standalone --output=index.html README.md
