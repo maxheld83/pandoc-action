@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - uses: maxheld83/pandoc@master
+      - uses: maxheld83/pandoc@v2
         with:
           args: "--help"
 ```
@@ -72,7 +72,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: mkdir output
       - run: echo "foo" > input.txt
-      - uses: maxheld83/pandoc@master
+      - uses: maxheld83/pandoc@v2
         with:
           args: "--standalone --output=output/index.html input.txt"
       - uses: actions/upload-artifact@master
