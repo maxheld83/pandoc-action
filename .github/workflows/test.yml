@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Run Pandoc
         uses: maxheld83/pandoc@master
-        args: '--standalone --output=index.html README.md'
+        args: --standalone --output=index.html README.md
