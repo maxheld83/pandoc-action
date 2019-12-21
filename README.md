@@ -4,18 +4,31 @@
 [![Actions Status](https://github.com/maxheld83/pandoc/workflows/Document%20Conversion/badge.svg)](https://github.com/maxheld83/pandoc/actions)
 <!-- badges: end -->
 
-## Soft-Deprecation
+## Soft-Deprecation: Better Alternatives
 
 **This action is soft-deprecated, because you no longer need it.**
 
-You can now *directly* [reference container actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#referencing-a-container-on-docker-hub) on GitHub Actions.
-This action is thus no longer needed.
-(If you disagree, please reopen [#16](https://github.com/maxheld83/pandoc/issues/16).)
-You can continue to use the [pandoc containers](https://github.com/maxheld83/pandoc/issues/16) on GitHub Actions, but now you can just reference it by, say, `uses: docker://pandoc/latex:2.9` instead of `uses: maxheld83/pandoc@v2`.
-
 **This action will remain listed, but will no longer receive major updates**.
 
-To learn more about using pandoc on GitHub Actions, see this [example](https://github.com/maxheld83/pandoc-example).
+There are now two better ways to use pandoc on GitHub Actions:
+
+### Container Actions
+
+You can now *directly* [reference container actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#referencing-a-container-on-docker-hub) on GitHub Actions.
+
+You can continue to use the [pandoc containers](https://github.com/maxheld83/pandoc/issues/16) on GitHub Actions, but now you can just reference it by, say, `uses: docker://pandoc/latex:2.9` instead of `uses: maxheld83/pandoc@v2`.
+
+To learn more about using pandoc on GitHub Actions in this way, see these [examples](https://github.com/maxheld83/pandoc-example).
+
+
+### `setup-pandoc` Action
+
+In the above, you're using pandoc from a pre-build docker image, that you're running as a *container* on your GitHub Actions host machine.
+
+Alternatively, you can use [Jim Hester](https://www.jimhester.com)'s [setup-pandoc](https://github.com/r-lib/actions/tree/master/setup-pandoc) action.
+This action will accept a `pandoc-version` as an input and install the respective version directly into your GitHub Actions *host machine*.
+This may take longer (?), and does not include LaTeX, but you can use pandoc in any of your steps and can even run a matrix build over different pandoc versions.
+
 
 ----
 
