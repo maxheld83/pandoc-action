@@ -1,7 +1,7 @@
 # GitHub Action to Convert Documents via Pandoc
 
 <!-- badges: start -->
-[![Actions Status](https://github.com/maxheld83/pandoc/workflows/Document%20Conversion/badge.svg)](https://github.com/maxheld83/pandoc/actions)
+[![Actions Status](https://github.com/maxheld83/pandoc-action/workflows/Document%20Conversion/badge.svg)](https://github.com/maxheld83/pandoc-action/actions)
 <!-- badges: end -->
 
 ## Soft-Deprecation: Better Alternatives
