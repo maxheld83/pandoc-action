@@ -1,6 +1,8 @@
 # GitHub Action to Convert Documents via Pandoc
 
-[![GitHubActions](https://img.shields.io/badge/as%20seen%20on%20-GitHubActions-blue.svg)](https://github-actions.netlify.com/pandoc)
+<!-- badges: start -->
+[![Actions Status](https://github.com/maxheld83/pandoc/workflows/Document%20Conversion/badge.svg)](https://github.com/maxheld83/pandoc/actions)
+<!-- badges: end -->
 
 This action lets you use [pandoc](https://pandoc.org/), the **swiss army knife of document conversion**.
 
